@@ -1,0 +1,245 @@
+@font-face {
+  font-family: fredoka;
+  src: url(/Fredoka-Regular.ttf)
+}
+*{
+  box-sizing: border-box;
+  font-family: fredoka, Arial, Helvetica, sans-serif;
+}
+
+html, body{
+  margin: 0;
+  height: auto;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  
+}
+.App{
+  margin: 0; 
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav{
+  background-color: rgba(0,0,0,0);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  
+}
+.nav .site-title{
+  font-size: 2rem;
+  text-decoration: none;
+}
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  font-style: italic;
+}
+.nav a{
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+  font-size: 1.2rem;
+}
+.nav li.active{
+  color:hsl(0, 0%, 80%) ;
+}
+.nav li:hover{
+  color:hsl(0, 0%, 50%) ;
+}
+.footer{
+  align-items: center;
+  margin-top: auto;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: .3rem;
+  justify-content: space-between;
+}
+
+.App .start {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 10rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.App .start .image img{
+  width: 13rem;
+  height: 20rem;
+  border-radius: 50%;
+  padding: .5rem;
+  border: .5rem solid hsl(0, 0%, 80%);
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, .3);
+}
+.App .start .content{
+  padding: 0rem 8rem;
+}
+.container{
+  text-align: center;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.container ul{
+  list-style-type: none;
+  
+}
+.container ul li{
+  padding: 2rem 0;
+  font-size: 1.4rem;
+}
+.container ul li i{
+  font-size: 2rem;
+  color: black;
+}
+.container .letter{
+  padding: 1rem 3rem;
+  
+}
+.git-projects .projects .projectDiv a{
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+  padding:.5rem;
+  background-color: hsl(0, 0%, 90%);
+  border: 2px solid hsl(0, 0%, 0%);
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, .5);
+  display: inline-block;
+  margin: .5rem;
+  transition: all 0.3 ease;
+  border-radius: .7rem;
+}
+
+.git-projects .projects .projectDiv a:hover{
+  border-color: hsl(0, 0%, 70%);
+  color: hsl(0, 0%, 70%);
+}
+.git-projects .projects .projectDiv p{
+  text-align: center;
+  margin: 2rem 0;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.portfolio-loading{
+  text-align: center;
+  margin: 2rem 0;
+  padding: 10rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.container img{
+  border-radius: 10rem;
+  width: 13rem;
+  height: 9rem;
+}
+
+@media screen and (max-width: 600px) {
+  body{
+      font-size: 14px;
+      margin: 0;
+  background-color: #fff;
+  }
+  .start{
+      flex-direction: column;
+  }
+  .nav .site-title{
+    justify-content: center;
+  }
+  .nav ul {
+      display: block;
+      text-align: center;
+      padding: 0;
+  }
+  img{
+      max-width: 100%;
+      height: auto;
+  }
+
+  .nav li {
+      display: block;
+      padding-right: 25px;
+      padding-left: 7px;
+      margin: 5px 0; /* Lägger till lite vertikalt utrymme mellan länkarna */
+  }
+
+  .nav a {
+      display: block;
+      width: 100%;
+      padding: 10px; /* Ökar klickytan för varje länk */
+  }
+  
+}
+
+.overlay .overlayBackground{
+  background-color: rgba(0, 0, 0, .5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 9;
+}
+.overlay  .modalP{
+  background-color: yellow;
+  position: fixed; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 10;
+  padding: 30px; 
+  border-radius: 13rem;
+  width: fit-content;
+  height: fit-content;
+  padding-top: 50px;
+}
+.overlay .modalP .easterImg{
+  justify-content: center;
+  height: auto;
+  width: 60%;
+  border-radius: 13rem;
+}
+.overlay .overlayControls{
+  position: absolute;
+  top: 2;
+  right: 7rem;
+  padding: 10px
+}
+.overlayControls .close-btn{
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.overlayControls .close-btn:after{
+  display: inline-block;
+  content: "\00d7";
+}

@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react"
-
+import profilePic from "./images/profilbild.jpg"
 
 function Home(){
 
@@ -33,7 +33,7 @@ function Home(){
                     </p>
             </div>
             <div className="image" >
-            <img src="/profilbild.jpg" alt="profilepicture" onClick={click}/>
+            <img src={profilePic} alt="profilepicture" onClick={click}/>
             </div>
 
         </div>

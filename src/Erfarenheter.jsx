@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import silenPic from "./images/silentia.png"
+import fbgPic from "./images/falkenbergs.gif"
+import expData from "./json/experience.json"
+
 function Erfarenheter() {
-    const [erfarenheter, setErfarenheter] = useState({ work: [] });
+
+    const [utbildningar, setUtbildningar] = useState({ work: [] });
 
     useEffect(() => {
-        fetch("./experience.json")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Nätverksrespons var inte ok');
-                }
-                return response.json();
-            })
-            .then(data => setErfarenheter(data))
-            .catch(error => console.error('Ett fel uppstod vid hämtning av utbildningsdata: ', error));
+        // Eftersom jsData redan är laddad och inte behöver hämtas,
+        // kan du direkt använda den här.
+        setUtbildningar(expData);
     }, []);
+    const [erfarenheter, setErfarenheter] = React.useState(expData);
 
 return (
     <div className="container">
         <div id="silentia">
             <h2>Silentia</h2>
-            <img src="./silentia.png" alt="Logo of Silentia AB" />
+            <img src={silenPic} alt="Logo of Silentia AB" />
             {erfarenheter.work[0] && (
                 <p>{erfarenheter.work[0].company}<br/>{erfarenheter.work[0].role}<br/>{erfarenheter.work[0].year}</p>
             )}
@@ -26,7 +26,7 @@ return (
         
         <div id="falkenbergs">
             <h2>Falkenbergs Plåtslageri</h2>
-            <img src="./falkenbergs.gif" alt="Logo of Falkenbergs plåtslageri"/>
+            <img src={fbgPic} alt="Logo of Falkenbergs plåtslageri"/>
             {erfarenheter.work[1] && (
                 <p>{erfarenheter.work[1].company}<br/>{erfarenheter.work[1].role}<br/>{erfarenheter.work[1].year}</p>
             )}

@@ -45,7 +45,7 @@ useEffect(() => {
                     <div className="overlayControls">
                     <button className="close-btn" type="button"onClick={handleCloseClick}></button>
                     </div>
-                    <img src="/easter.jpg" alt="Picture of a monkey dressed up as a easterbunny" className="easterImg" /> 
+                    <img src="./easter.jpg" alt="Picture of a monkey dressed up as a easterbunny" className="easterImg" /> 
                     
                     <h2>Du hittade påskägget</h2> 
                 </div>

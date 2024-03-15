@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react"
 
+
 function Home(){
 
     const [color, setColor] = useState("white");
